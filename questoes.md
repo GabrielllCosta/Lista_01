@@ -200,11 +200,14 @@ ______
 
 a) A asserção é falsa e a razão é verdadeira.
 
-b) A asserção é verdadeira e a razão é falsa.
+b) A asserção é verdadeira e a razão é falsa.(Correta)
 
 c) A asserção é verdadeira e a razão é verdadeira, mas a razão não explica a asserção.
 
 d) A asserção é verdadeira e a razão é verdadeira, e a razão explica a asserção.
+
+Justifique:
+Resposta: O polimorfismo consiste em um mesmo método que pode ser implementado por classes diferentes de formas diferentes, mas possui o mesmo efeito.
 
 ______
 
@@ -212,13 +215,24 @@ ______
 9) O seguinte código deve retornar a soma do dobro dos números de um array, mas contém erros. Identifique os problema e corrija o código para que funcione corretamente. Adicione comentários ao código explicado sua solução para cada problema.
 
 ```javascript
+a = []
 function somaArray(numeros) {
 
-    for (i = 0; i < numeros.size; i++) {
-        soma = 2*numeros[i];
-    }
-    return soma;
-}
+    for (i = 0; i < numeros.length; i += 1) { //o Size é usado para saber a quantidade de elementos em um objeto, mas não é usado em listas
+                                             //para listas tem que usar o length
+                                             //Retirei o objeto soma porque ele não tinha utilizade
+
+        lista.push(numeros[i])//Estou criando um lista com todos os numeros
+        
+        
+    }//Aqui, teremos um acumulador que percorre todos os elementos da lista.
+    //Primeiro, o acumulador começa com 0 e é somado ao dobro do primeiro elemento da lista.
+    //Esse resultado se torna o novo valor do acumulador, e esse processo se repete para todos os elementos.
+    //Assim, teremos o exato resultado pedido para a questão, a soma do dobro dos números de um array.
+    resultado = lista.reduce((acumulador, numeros) => acumulador + (numeros*2), 0) //Essa função reduce reduz a lista a um único número
+    return resultado; 
+    
+};
 console.log(somaArray([1, 2, 3, 4]));
 ```
 ______
