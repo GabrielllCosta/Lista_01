@@ -22,7 +22,7 @@ var x = 5;
 console.log(y);
 let y = 10;
 ```
-a) A saída será undefined seguido de erro 
+a) A saída será undefined seguido de erro (correta)
 
 b) A saída será 5 seguido de 10
 
@@ -30,6 +30,8 @@ c) A saída será undefined seguido de undefined
 
 d) A saída será erro em ambas as linhas que utilizam console.log
 
+Justificativa:
+A variável foi definida dps do comando,mas como é var o computador entende que ela existe só que está indefinida, já o let tem que ser dado antes do comando para que o computador entenda que ela existe, por isso da erro.
 
 **2) O seguinte código JavaScript tem um erro que impede sua execução correta. Analise e indique a opção que melhor corrige o problema. Justifique sua resposta.**
 
@@ -43,7 +45,7 @@ function soma(a, b) {
 console.log(soma(2, 0));
 ```
 
-a) Substituir if (a || b === 0) por if (a === 0 || b === 0)
+a) Substituir if (a || b === 0) por if (a === 0 || b === 0) (correta)
 
 b) Substituir if (a || b === 0) por if (a === 0 && b === 0)
 
@@ -51,6 +53,8 @@ c) Substituir if (a || b === 0) por if (a && b === 0)
 
 d) Remover completamente a verificação if (a || b === 0)
 
+Justificativa:
+Para que o computador entenda se A ou B = 0, então é necessário que um valor seja atribuido a cada variável, dentro dos "()" do if.
 ______
 **3) Ao executar esse código, qual será a saída no console? Indique a alternativa correta e justifique sua resposta.**
 ```javascript
@@ -78,11 +82,14 @@ console.log(calcularPreco("eletrônico"));
 
 a) O código imprime 1000.
 
-b) O código imprime 200.
+b) O código imprime 200. (Correta)
 
 c) O código imprime 50.
 
 d) O código gera um erro.
+
+Justificativa:
+Dentro da switch é necessário ter a função break para que o comando pare de ser executado, mesmo que fosse "eletrônico" o código rodou até o próximo break que no caso é 200.
 
 ______
 **4) Ao executar esse código, qual será a saída no console? Indique a alternativa correta e justifique sua resposta.**
@@ -99,7 +106,10 @@ b) 6
 
 c) 18
 
-d) 24
+d) 24 (Correta)
+
+Justificativa:
+A lista numeros é inicialmente composta pelos valores de 1 a 5. Primeiramente, cada elemento é multiplicado por dois, gerando a nova sequência [2, 4, 6, 8, 10]. Em seguida, são filtrados apenas os números maiores que cinco, resultando na lista [6, 8, 10]. Por fim, os números restantes são somados, obtendo-se o total de 24.
 ______
 **5) Qual será o conteúdo do array lista após a execução do código? Indique a alternativa correta e justifique sua resposta.**
 
@@ -113,9 +123,12 @@ a) ["banana", "maçã", "uva", "abacaxi", "manga", "laranja"]
 
 b) ["banana", "abacaxi", "manga"]
 
-c) ["banana", "abacaxi", "manga", "laranja"]
+c) ["banana", "abacaxi", "manga", "laranja"] (Correta)
 
 d) ["banana", "maçã", "uva", "abacaxi", "manga"]
+
+Justificativa:
+o comando splice() faz com que termos sejam substituidos, primeiro seleciona os termos, 1 e 2 que são referentes a maçã e uva, pois na lista os termos começam a serem contados do zero. Depois é selecionado quais termos substituirão os anteriores, abacaxi e manga.
 ______
 **6) Abaixo há duas afirmações sobre herança em JavaScript. Indique a alternativa correta e justifique sua resposta**
 
@@ -123,13 +136,16 @@ I. A herança é utilizada para compartilhar métodos e propriedades entre class
 II. Em JavaScript, a herança é implementada através da palavra-chave `extends`.
 
 
-a) As duas afirmações são verdadeiras, e a segunda justifica a primeira.
+a) As duas afirmações são verdadeiras, e a segunda justifica a primeira. (Correta)
 
 b) As duas afirmações são verdadeiras, mas a segunda não justifica a primeira.
 
 c) A primeira afirmação é verdadeira, e a segunda é falsa.
 
 d) A primeira afirmação é falsa, e a segunda é verdadeira.
+
+Justificativa:
+É necessário usar o extends, como em: class ClasseFilha extends ClassePai, no JS, para que seja possível que uma classe herde os métodos de outra, deixando o código mais organizado e compacto.
 ______
 **7) Dado o seguinte código. Indique a alternativa correta e justifique sua resposta.**
 
@@ -165,7 +181,7 @@ III) O código não funciona corretamente, pois Funcionario não pode herdar de 
 
 Quais das seguintes afirmações são verdadeiras sobre o código acima?
 
-a) I e II são verdadeiras.
+a) I e II são verdadeiras. (Correta)
 
 b) I, II e III são verdadeiras.
 
@@ -173,6 +189,8 @@ c) Apenas II é verdadeira.
 
 d) Apenas I é verdadeira.
 
+Justificativa:
+Resposta: 1- verdadeiro, quando uma class herda os atributos de outra, ela pode usar esses atributos. 2-Sim, isso se chama sobreposição de métodos. A classe funcionário tem uma função método igual a classe pai, na linha super.apresentar() dentro do método Funcionario garante que o método da classe pai seja executado antes de adicionar funcionalidades específicas de Funcionario.
 ______
 
 **8) Analise as afirmações a seguir. Indique a alternativa correta e justifique sua resposta.**
